@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bas for Business</title>
+        <meta name="charset" name="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body style="height: 1500px">
+        <script src="https://eduqii.github.io/Basforbusiness/main.js"></script>
+        <script src="../controller/main.js"></script>
+        <div class="container mt-3">
+            <blockquote class="blockquote">
+              <p class="h2"><pre>Transforming software into solutions.
+              Connect. Automate. Innovate.</pre></p>
+                <footer class="blockquote-footer">Benit Apollo Solutions </footer>
+            </blockquote><br>
+            <ul class="nav nav-tabs" role="tablist" id="navtabs">
+                <li class="nav-item">
+                    <a href="#bassol" class="nav-link active" data-bs-toggle="tab">BAS Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#useraccount">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#settings">Settings</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="container tab-pane active" id="bassol">
+                    <p class="h1" id="user"></p>
+                    <div class="container">
+                            <p class="h1"> Hardware &amp; Software Solutions </p>
+                            <div class= "btn-group mt-2 mb-3">
+                                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#businesssolution">Solution</button>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Integrated Systems</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="https://eduqii.github.io/Basforbusiness/demo.html">Demo</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">SaaS &amp; PaaS</a>
+                                     </div>
+                                    </div>
+                            </div>
+                            <p class="collapse" id="businesssolution">Business automation and seamless support for the best sales streamlines lies in integrating the best technology.<br>
+                            <input type="button" class="btn btn-primary mt-2" value="View Solutions" onclick="location.href='https://eduqii.github.io/Basforbusiness/solutions.html'"></p>
+                    </div>
+                </div>
+                <div class="container mt-3 p-3 tab-pane fade" id="useraccount">
+                    <p class="h1">Account</p>
+                    <p>Get your account to automate processes for seamless integrations</p>
+                    <div class="btn-group">
+                        <input type="button" class="btn btn-primary" value="Login" onclick="location.href='https://eduqii.github.io/Basforbusiness/login.html'">
+                    <input type="button" class="btn btn-primary" value="Register" onclick="location.href='https://eduqii.github.io/Basforbusiness/register.html'">
+                    </div>
+                </div>
+                
+                <div class="container mt-3 p-3 tab-pane fade" id="settings">
+                    <p class="h1">Settings</p>
+                    <div class="container">
+                        <div class="text-bg-light p-3 rounded" id="settingscontrolsa">
+                        <div class="row">
+                            <div class="col">
+                                <h6>Dark Mode</h6>
+                            </div>
+                            <div class="col">
+                                <form>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" onclick="changeMode()">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <p class="mb-3">
+                            Change the background theme to your preferred theme. 
+                        </p>
+                        </div>
+                        <div class="text-bg-light mt-2 p-3 rounded" id="settingscontrolsb">
+                        <div class="row">
+                            <div class="col">
+                                <h6>Locale</h6>
+                            </div>
+                            <div class="col">
+                                <p><span class="spinner-grow spinner-grow-sm text-bg-dark"></span>loading</p>
+                            </div>
+                        </div>
+                        <p class="mb-3">select your locale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" id="mainmenu">
+            <div class="container-fluid">
+                <a href="javascript:void(0)" class="navbar-brand">BAS</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="mainmenu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://eduqii.github.io/Basforbusiness/basservices.html">Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Business</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                            <a class="text-decoration-none" href="https://eduqii.github.io/Basforbusiness/solutions.html">Solutions</a>
+                        </li>
+                                <li class="dropdown-item">
+                                    <a class="text-decoration-none" href="https://eduqii.github.io/Basforbusiness/project-submission.html">Start A Project </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="text-decoration-none">For Developers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://eduqii.github.io/Basforbusiness/about.html">About Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="software, service, invoice..">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="mt-5 p-5 text-bg-primary rounded" id="visionbanner">
+                <h1 class="display-2">BAS for Business</h1>
+                <p>Solve business challenges with Information Technology. A smart investment.</p>
+            </div>
+        </div>
+    </body>
+</html>
