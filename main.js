@@ -21,7 +21,7 @@ loadr.style.visibility = "visible";
 const loadHome = function () {
      let loadr = document.querySelector('#loadstatus');
     loadr.style.visibility = "visible";
-    document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/index.html");
+    document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/home.html");
     if(regfullname !== " "){
         document.querySelector("#user").innerHTML =           "Hello " + regfullname  + "Explore our various list of seamless integration systems. Check out solutions customized for your needs.";
     }
