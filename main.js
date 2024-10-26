@@ -8,11 +8,11 @@ let loadr = document.querySelector("#loadPage");
 loadr.style.visibility = "visible";
 
     if(regfullname !== " "){
-    document.location.assign("https://eduqii.github.io/Basforbusiness/solutions.html")
+    document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/solutions.html")
         //document.location.assign("../view/home.html")
     }
     else{
-        document.location.assign("https://eduqii.github.io/Basforbusiness/index.html");
+        document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/index.html");
     }
 }
 //eval(loadBas());
@@ -21,7 +21,7 @@ loadr.style.visibility = "visible";
 const loadHome = function () {
      let loadr = document.querySelector('#loadstatus');
     loadr.style.visibility = "visible";
-    document.location.assign("https://eduqii.github.io/Basforbusiness/home.html");
+    document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/index.html");
     if(regfullname !== " "){
         document.querySelector("#user").innerHTML =           "Hello " + regfullname  + "Explore our various list of seamless integration systems. Check out solutions customized for your needs.";
     }
@@ -55,11 +55,11 @@ const userSent = function(){
     let regemail = localStorage.email;
     let regpassword = localStorage.password;
     if(user == regemail && pswd == regpassword){
-      document.location.assign("https://eduqii.github.io/Basforbusiness/home.html");
+      document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/home.html");
        // document.location.assign("../view/home.html")
     }else{
     console.log(regemail);
-        alert("email not found")
+        alert("email not found");
     }
     
 }
