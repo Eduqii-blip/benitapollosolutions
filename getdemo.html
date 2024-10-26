@@ -20,16 +20,17 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-              let dtagram = {
+              var dtagram = {
                     from_name: document.getdemoform.businessname.value,
                     to_name : document.getdemoform.user_email.value,
-                    message: document.getdemoform.syllabus.value
-                }
+                    message: document.getdemoform.syllabus.value,
+                };
                 emailjs.sendForm('service_je7v6yn', 'template_hjzp2fe', dtagram)
                     .then(() => {
                         console.log('SUCCESS!');
+                        alert("sent");
                     }, (error) => {
-                        console.log('FAILED...', error);
+                        alert('FAILED...', error);
                     });
             });
         }
