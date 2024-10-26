@@ -20,7 +20,12 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('service_je7v6yn', 'template_hjzp2fe', this)
+              let dtagram = {
+                    from_name: document.getdemoform.businessname.value,
+                    to_name : document.getdemoform.user_email.value,
+                    message: document.getdemoform.syllabus.value
+                }
+                emailjs.sendForm('service_je7v6yn', 'template_hjzp2fe', dtagram)
                     .then(() => {
                         console.log('SUCCESS!');
                     }, (error) => {
@@ -35,15 +40,15 @@
 <body>
     <div class="container">
         <div class="shadow-lg m-5 p-3 rounded">
-            <form id="contact-form">
+            <form name="getdemoform" id="contact-form">
         <!-- To simplify the tutorial, the value is static. -->
         <input type="hidden" name="contact_number" value="697483">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" name="user_name">
+        <label class="form-label">Business Name</label>
+        <input type="text" class="form-control" name="business_name">
         <label class="form-label">Email</label>
         <input class="form-control" type="email" name="user_email">
-        <label class="form-label">Message</label>
-        <textarea class="form-control mb-3" name="message"></textarea>
+        <label class="form-label">School Syllabus</label>
+        <textarea class="form-control mb-3" name="syllabus"></textarea>
         <input class="btn btn-primary" type="submit" value="Send">
     </form>
     </div>
