@@ -2,7 +2,6 @@ let regfullname;
 let regemail;
 let regpassword;
 let count = 1;
-
 const loadBas = function () {
 let loadr = document.querySelector("#loadPage");
 loadr.style.visibility = "visible";
@@ -103,3 +102,36 @@ pricelist.push(price)
 alert(pricelist.length)
     //document.forms[0].totalprice.value = pricelist;
 } 
+
+function disQuf(){
+    let questions;
+    let totalquestion = parseInt(document.buildquizform.totalnumber.value);
+    let questioncount = document.querySelector("#disQuf");
+    if(typeof(Storage) !== "undefined"){
+        localStorage.totalquestion = totalquestion;
+        questions = localStorage.totalquestion;
+    console.log(totalquestion)
+    alert(questions);
+    }
+} 
+
+function fisQuf(){ 
+let totalquestfield = document.querySelector('#totalnumfield');
+totalquestfield.classList.add('disabled');
+let totalquestion = parseInt(document.buildquizform.totalnumber.value);
+let questfields = document.querySelector('#disQuf');
+let counter = 0;
+let questions;
+for(counter;counter<totalquestion;counter++){
+questions = document.createElement("input");
+questions.classList.add("form-control");
+questions.classList.add("mt-2")
+questions.setAttribute('placeholder','enter question');
+questions.setAttribute('name', 'quest');
+let thequest = document.querySelector('quest').value;
+questfields.appendChild(questions);
+console.log("i did something " + totalquestion);
+console.log("i stored something " + thequest);
+}
+
+}
