@@ -16,23 +16,20 @@
         })();
     </script>
     <script type="text/javascript">
-        function getDemo() {
-                // these IDs from the previous steps
-              var dtagram = {
-                    from_name: document.getElementById('business_name').value,
-                    to_name: document.getElementById('user_email').value,
-                    message: document.getElementById('syllabus').value
-                };
-                
-                emailjs.sendForm('service_je7v6yn', 'template_hjzp2fe', dtagram)
+        
+        
+        window.onload = function() {
+                 document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // - IDs from the previous steps
+                emailjs.sendForm('service_je7v6yn', 'template_hjzp2fe', this)
                     .then(() => {
                         console.log('SUCCESS!');
-                        alert("sent");
                     }, (error) => {
-                        alert(error);
+                        console.log('FAILED...', error);
                     });
+            });
         }
-        
         
     </script>
 </head>
@@ -42,12 +39,12 @@
             <form name="getdemoform" id="contact-form" method="POST">
         <!-- To simplify the tutorial, the value is static. -->
         <label class="form-label">Business Name</label>
-        <input type="text" class="form-control" id="business_name">
+        <input type="text" class="form-control" name="user_name">
         <label class="form-label">Email</label>
-        <input class="form-control" type="email" id="user_email">
+        <input class="form-control" type="email" name="user_email">
         <label class="form-label">School Syllabus</label>
-        <textarea class="form-control mb-3" id="syllabus"></textarea>
-        <input class="btn btn-primary" type="submit" value="Send" onclick="getDemo">
+        <textarea class="form-control mb-3" name="message"></textarea>
+        <input class="btn btn-primary" type="submit" value="Send">
     </form>
     </div>
     </div>
