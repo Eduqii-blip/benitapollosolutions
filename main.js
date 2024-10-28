@@ -115,6 +115,8 @@ function disQuf(){
     }
 } 
 
+
+
 function fisQuf(){ 
 let totalquestfield = document.querySelector('#totalnumfield');
 totalquestfield.classList.add('disabled');
