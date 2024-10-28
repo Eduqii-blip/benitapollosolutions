@@ -64,8 +64,9 @@ const userSent = function(){
 }
 
 const changeMode = function (){
+"use strict";
     count++;
-    let htmlBody = document.querySelector('html');
+    const htmlBody = document.querySelector('html');
     const themehelper = document.querySelector('#mainmenu');
     let visionbanner =  document.querySelector('#visionbanner');
     let settingscontrolsa = document.querySelector('#settingscontrolsa');
@@ -115,7 +116,33 @@ function disQuf(){
     }
 } 
 
+//customer
+/*
+(function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "D1y25vk5Im7SPLYnC",
+            });
+        })();
 
+window.onload = function() {
+                 document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // - IDs from the previous steps
+                emailjs.sendForm('service_je7v6yn', 'template_hjzp2fe', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }*/
+        
+        function getSolution(message){
+            alert(message);
+           // return message;
+        }
+// ghana
 
 function fisQuf(){ 
 let totalquestfield = document.querySelector('#totalnumfield');
