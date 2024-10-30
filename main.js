@@ -3,7 +3,7 @@ import { loadHome, userSent, formSent, solurl, suiteurl } from 'https:/\/eduqii-
  let userrequest = document.querySelector('userForm');
  let userrequestreg = document.querySelector('regForm');
 
-userrequest.addEventListener("click", (e) => {
+/*userrequest.addEventListener("click", (e) => {
     e.preventDefault();
     
     alert("i did something too");
@@ -15,7 +15,7 @@ userrequestreg.addEventListener("click", (e) => {
     
     alert("i did something");
    // formSent();
-});
+});*/
 
 const loadPage = function (){
        loadHome();
