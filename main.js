@@ -17,8 +17,9 @@ userrequestreg.addEventListener("click", (e) => {
    // formSent();
 });
 
-const loadPage = loadHome();
-eval(loadPage());
+const loadPage = function (){
+       loadHome();
+}
 
 const getSolution = funtion(){
     document.write("loading please wait...");
