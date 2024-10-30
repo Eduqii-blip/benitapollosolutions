@@ -18,6 +18,7 @@ userrequestreg.addEventListener("click", (e) => {
 });
 
 const loadPage = loadHome();
+eval(loadPage());
 
 const getSolution = funtion(){
     document.write("loading please wait...");
