@@ -15,4 +15,4 @@ userrequestreg.addEventListener("click", (e) => {
     formSent();
 });
 
-window.onload(loadHome());
+eval(loadHome());
