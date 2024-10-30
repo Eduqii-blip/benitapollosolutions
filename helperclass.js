@@ -118,7 +118,6 @@ let searchterms = localStorage.searchterms;
 }
 
 const changeMode = function (){
-"use strict";
     count++;
     const htmlBody = document.querySelector('html');
     const themehelper = document.querySelector('#mainnav');

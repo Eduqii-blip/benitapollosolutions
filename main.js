@@ -1,9 +1,7 @@
-import loadHome from './helperclass.js';
-import userSent from '.helperclass.js';
-import formSent from './helperclass.js';
+import { loadHome, userSent, formSent } from 'https:/\/eduqii-blip.github.io/benitapollosolutions/helperclass.js';
 
-let userrequest = document.querySelector('userForm');
-let userrequestreg = document.querySelector('regForm');
+export let userrequest = document.querySelector('userForm');
+export let userrequestreg = document.querySelector('regForm');
 
 userrequest.addEventListener("click", (e) => {
     e.preventDefault();
@@ -14,6 +12,7 @@ userrequest.addEventListener("click", (e) => {
 userrequestreg.addEventListener("click", (e) => {
     e.preventDefault();
     
-    userSent();
+    formSent();
 });
-window.onload(loadHome);
+
+window.onload(loadHome());
