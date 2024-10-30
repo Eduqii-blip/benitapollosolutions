@@ -1,9 +1,10 @@
-import { loadHome, userSent, formSent, solurl, suiteurl } from 'https:/\/eduqii-blip.github.io/benitapollosolutions/index.js';
+import { loadHome, solurl, suiteurl } from 'https://eduqii-blip.github.io/benitapollosolutions/index.js';
 
+/*
  let userrequest = document.querySelector('userForm');
  let userrequestreg = document.querySelector('regForm');
 
-/*userrequest.addEventListener("click", (e) => {
+userrequest.addEventListener("click", (e) => {
     e.preventDefault();
     
     alert("i did something too");
