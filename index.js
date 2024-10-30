@@ -1,3 +1,6 @@
+const suiteurl = "https:/\/edudiqii-blip.github.io/benitapollosolutions/educationstudy.html";
+const solurl = "https:/\/eduqii-blip.github.io/benitapollosolutions/educationsolution.html";
+export { suiteurl, solurl }
 let regfullname;
 let regemail;
 let regpassword;
@@ -10,7 +13,7 @@ loadr.style.visibility = "visible";
     document.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/solutions.html");
     }
     else{
-        document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/index.html");
+        document.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/index.html");
     }
 }
 //eval(loadBas());
