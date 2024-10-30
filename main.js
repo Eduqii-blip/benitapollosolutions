@@ -21,7 +21,7 @@ const loadPage = function (){
        loadHome();
 }
 
-const getSolution = funtion(){
+const getSolution = function(){
     document.write("loading please wait...");
     window.location.assign(solurl);
 }
