@@ -7,7 +7,6 @@ export const message = function (){
     headstatus.classList.add("display-3");
     _load.classList.add("spinner-border");
     loadstatus.appendChild(headstatus);
-    loadStatus.innerText = "Loading.. please wait";
     headstatus.appendChild(_load);
     
     
