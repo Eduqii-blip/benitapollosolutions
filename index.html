@@ -8,12 +8,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script type="module" src="https://eduqii-blip.github.io/benitapollosolutions/main.js"></script>
         <script type="module">
-            import { loadHome } from 'https://eduqii-blip.github.io/benitapolllosolutions/index.js';
-            let loadr = document.querySelector('#loadstatus');
-            loadr.style.visibility = "visible";
-            let homeBody = document.querySelector('body');
-            homebody.addEventListener("load", (e) => {
-                loadHome();
+            import { message } from 'https://eduqii-blip.github.io/benitapollosolutions/index.js';
+            
+            window.addEventListener("load", (e) => {
+                 e.preventDefault();
+                 
+                alert(message);
             }, false);
         </script>
     </head>
