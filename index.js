@@ -19,20 +19,20 @@ loadr.style.visibility = "visible";
 //eval(loadBas());
 
 //loadHome
-export const loadHome = function () {
+const loadHome = function () {
      let loadr = document.querySelector('#loadstatus');
     loadr.style.visibility = "visible";
     document.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/home.html");
-    if(regfullname !== " "){
+ /*   if(regfullname !== " "){
         document.querySelector("#user").innerHTML =           "Hello " + regfullname  + "Explore our various list of seamless integration systems. Check out solutions customized for your needs.";
     }
     else{
         document.querySelector("#user").innerHTML = "Explore our range of augmented and automated systems.";
-    }
+    }*/
     
 }
 
-export const formSent = function(){
+const formSent = function(){
     let fullname = regform.fullname.value;
     let email = regform.email.value;
     let password = regform.password.value;
@@ -45,18 +45,18 @@ export const formSent = function(){
         regpassword = localStorage.password;
        console.log(regfullname);
        console.log(regemail);
-       document.querySelector('#regalert').innerHTML = "Howdy! " + regfullname;
+       document.querySelector("#regalert").innerHTML = "Howdy! " + regfullname;
        document.location.assign("https:/\/google.com")
     }
 }
 
-export const userSent = function(){
+const userSent = function(){
     let user = userform.email.value;
     let pswd = userform.password.value;
     let regemail = localStorage.email;
     let regpassword = localStorage.password;
     if(user == regemail && pswd == regpassword){
-      document.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/home.html");
+      document.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/index.html");
        // document.location.assign("../view/home.html")
     }else{
     console.log(regemail);
@@ -64,6 +64,8 @@ export const userSent = function(){
     }
     
 }
+
+export { loadHome, formSent, userSent };
 
 let searxhque = new Array();
 let searchterm;
