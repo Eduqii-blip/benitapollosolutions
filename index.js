@@ -1,6 +1,5 @@
 export const message = function (){
-    alert("hello world");
-    
+    window.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/index.html");
     
 }
 
