@@ -1,1 +1,3 @@
-export const message = "hello world";
+export const message = function (){
+ alert("hello world!");
+}
