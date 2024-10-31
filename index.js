@@ -5,6 +5,7 @@ console.log("10")
 }
 
 const changeMode = function (){
+let count = 1;
     count++;
     const htmlBody = document.querySelector('html');
     const themehelper = document.querySelector('#mainnav');
@@ -40,6 +41,7 @@ const changeMode = function (){
       //  alert("i changed to light")
     }
     console.log("i changed mode");
+    console.log(count);
 }
 
 
