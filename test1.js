@@ -1,3 +1,5 @@
-import { membrane } from 'https:/\/eduqii-blip.github.io/benitapolllosolutions/.test2.js';
+const name = "John Doe";
 
-document.querySelector("#myId").innerHTML = membrane;
+const age = 300
+
+export { name, age };
