@@ -9,6 +9,8 @@
         <script type="module" src="https://eduqii-blip.github.io/benitapollosolutions/main.js"></script>
         <script type="module">
             import { loadHome } from 'https://eduqii-blip.github.io/benitapolllosolutions/index.js';
+            let loadr = document.querySelector('#loadstatus');
+            loadr.style.visibility = "visible";
             let homeBody = document.querySelector('body');
             homebody.addEventListener("load", (e) => {
                 loadHome();
