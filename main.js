@@ -38,6 +38,12 @@ const htmlBody = document.querySelector('html');
         }
     }
     
+    const getHardware = function (){
+        document.write("loading please wait...");
+        
+        window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/hardwaresolution.html");
+    }
+    
 const getSolution = function(){
     document.write("loading please wait...");
     window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationstudy.html");
