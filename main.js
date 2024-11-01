@@ -1,4 +1,6 @@
 let count = 1;
+const suiteurl = "https:/\/edudiqii-blip.github.io/benitapollosolutions/educationstudy.html";
+const solurl = "https:/\/eduqii-blip.github.io/benitapollosolutions/educationsolution.html";
 const changeMode = function (){
     count++;
 const htmlBody = document.querySelector('html');
@@ -37,3 +39,13 @@ const htmlBody = document.querySelector('html');
           }
         }
     }
+    
+const getSolution = function(){
+    document.write("loading please wait...");
+    window.location.assign(solurl);
+}
+
+const openSuite = function(){
+    document.write("loading please wait...");
+    window.location.assign(suiteurl);
+  }
