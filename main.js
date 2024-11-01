@@ -40,10 +40,18 @@ const htmlBody = document.querySelector('html');
     
 const getSolution = function(){
     document.write("loading please wait...");
-    window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationsolution.html");
+    window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationstudy.html");
 }
 
 const openSuite = function(){
     document.write("loading please wait...");
-    window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationstudy.html");
+    window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationsolution.html");
   }
+  
+  const openCalSys = function (){
+      document.write("loading please wait...");
+      
+      window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/getdemo.html")
+  }
+  
+ 
