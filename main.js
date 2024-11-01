@@ -60,4 +60,8 @@ const openSuite = function(){
       window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/getdemo.html")
   }
   
- 
+ const Subscribe = function (){
+     document.write("loading please wait...");
+     
+     window.location.assign("https://eepurl.com/iVSgP2");
+ }
