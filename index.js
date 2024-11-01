@@ -4,4 +4,7 @@ console.log("10")
     
 }
 
-export { message };
+const suiteurl = "https:/\/edudiqii-blip.github.io/benitapollosolutions/educationstudy.html";
+const solurl = "https:/\/eduqii-blip.github.io/benitapollosolutions/educationsolution.html";
+
+export { message, suiteurl, solurl };
