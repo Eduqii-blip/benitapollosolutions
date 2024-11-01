@@ -1,3 +1,6 @@
+let count = 1;
+const changeMode = function (){
+    count++;
 const htmlBody = document.querySelector('html');
     const themehelper = document.querySelector('#mainnav');
     const searchbtn = document.querySelector('#searchbtn');
