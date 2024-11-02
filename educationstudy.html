@@ -59,6 +59,16 @@
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
+        <div class="offcanvas offcanvas-bottom" id="clientstatus">
+            <div class="offcanvas-header">
+                <h1 class="display-5 offcanvas-title">Early Bird Access</h3>
+                <button class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>Enjoy Early Bird Access. Join our mailing list. Subscribe.</p>
+                <button type="button" class="btn btn-danger" onClick="Subscribe()">Subscribe</button>
+            </div>
+        </div>        
         <div class="container mt-5">
             <div class="shadow-lg bg-light m-5 p-5">
                 <form>
@@ -74,7 +84,7 @@
                         <option>Postgraduate</option>
                         <option disabled selected>Please select an option</option>
                     </select>
-                    <button class="btn btn-primary mt-5">Submit</button>
+                    <button class="btn btn-primary mt-5" data-bs-toggle="offcanvas"  data-bs-target="#clientstatus">Submit</button>
                 </form>
                 <p class="mt-5">Join our mailing list today. </p><input type="button" value="Subscribe" class="btn btn-danger" onClick="Subscribe()">
             </div>
