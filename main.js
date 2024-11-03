@@ -1,6 +1,10 @@
-let count = 1;
+"use strict"
+let rescount = 1;
+let count;
+let searxhque = new Array();
+let searchterm;
 const changeMode = function (){
-    count++;
+    rescount++;
 const htmlBody = document.querySelector('html');
     const themehelper = document.querySelector('#mainnav');
     const searchbtn = document.querySelector('#searchbtn');
@@ -8,7 +12,7 @@ const htmlBody = document.querySelector('html');
     let settingscontrolsa = document.querySelector('#settingscontrolsa');
     let settingscontrolsb = document.querySelector("#settingscontrolsb");
     if(typeof(Storage) !== "undefined"){
-              if(count % 2 == 0){
+              if(rescount % 2 == 0){
     htmlBody.setAttribute('data-bs-theme', 'dark');
     themehelper.classList.remove("bg-dark");
     themehelper.classList.add("bg-primary");
@@ -65,3 +69,56 @@ const openSuite = function(){
      
      window.location.assign("https://eepurl.com/iVSgP2");
  }
+ 
+ const searchHelper = function (){
+  let searxh = document.getElementById("searchterms").value;
+let thesearxh = searxh.trim();
+  let inventory = ["Solutions","Education","Health","solutions","education","health"]
+  for(count=0;count<inventory.length;count++){
+      if(thesearxh.includes(inventory[count])){
+          searxhque.push(inventory[count]);
+      }
+  }
+  
+ if(searxhque[0] == inventory[0]){
+      if(typeof(Storage) !== "undefined"){
+      localStorage.searchterms = searxhque[0];
+      }
+      window.location.assign("../controller/searchresult.html");
+ //     alert(searchterm);
+  }
+ else if(searxhque[1] == inventory[1]){
+      if(typeof(Storage) !== "undefined"){
+      localStorage.searchterms = searxhque[1];
+      }
+      window.location.assign("../controller/searchresult.html");
+  }
+  else if(searxhque[2] == inventory[2]){
+      if(typeof(Storage) !== "undefined"){
+      localStorage.searchterms = searxhque[2];
+      }
+      window.location.assign("../controller/searchresult.html");
+  }
+  else{
+      alert("not found try again later.");
+  }
+}
+
+const searchResult = function (){
+let searchterms = localStorage.searchterms;
+    let contheader = document.querySelector("#searchheader");
+    let contres = document.querySelector("#searchres1");
+    document.querySelector("#resname").innerHTML = localStorage.searchterms;
+    switch(localStorage.searchterms){
+        case "Solutions" || "solutions":
+            contheader.innerHTML = "Looking for: " + searchterms + " <span class='badge rounded-pill bg-info'>11</span>";
+        document.querySelector("#searchres1").innerText = "Solutions";
+        document.querySelector("#searchres2").innerText = "Demo";
+        break;
+        case "Education" || "education":
+           contheader.innerHTML = "Looking for: " + searchterms + " <span class='badge rounded-pill bg-info'>106</span>";
+           document.querySelector("#searchres1").innerText = "Up next";
+           document.querySelector("#searchres2").innerText = "Solutions";
+           break;
+    }
+}
