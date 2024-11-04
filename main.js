@@ -1,10 +1,8 @@
 "use strict"
-let rescount = 1;
+let counter = 1;
 let count;
-let searxhque = new Array();
-let searchterm;
 const changeMode = function (){
-    rescount++;
+    counter++;
 const htmlBody = document.querySelector('html');
     const themehelper = document.querySelector('#mainnav');
     const searchbtn = document.querySelector('#searchbtn');
@@ -12,7 +10,7 @@ const htmlBody = document.querySelector('html');
     let settingscontrolsa = document.querySelector('#settingscontrolsa');
     let settingscontrolsb = document.querySelector("#settingscontrolsb");
     if(typeof(Storage) !== "undefined"){
-              if(rescount % 2 == 0){
+              if(counter % 2 == 0){
     htmlBody.setAttribute('data-bs-theme', 'dark');
     themehelper.classList.remove("bg-dark");
     themehelper.classList.add("bg-primary");
@@ -69,54 +67,48 @@ const openSuite = function(){
      
      window.location.assign("https://eepurl.com/iVSgP2");
  }
+  document.getElementById("searchterms").addEventListener("keypress", function(event){
+     if(event === "Enter"){
+         event.preventDefault();
+        
+         document.getElementById("searchbtn").click();
+     }
+     
+ });
  
+ //search controller 
  const searchHelper = function (){
-  let searxh = document.getElementById("searchterms").value;
+ let searxh = document.getElementById("searchterms").value;
 let thesearxh = searxh.trim();
-  let inventory = ["Solutions","Education","Health","solutions","education","health"]
+let searchresults;
+  let inventory = ["Solutions","Education","Health","solutions","education","health"];
   for(count=0;count<inventory.length;count++){
       if(thesearxh.includes(inventory[count])){
-          searxhque.push(inventory[count]);
+          alert("search found");
+          if(typeof(Storage) !== "undefined"){
+              localStorage.searchresults = inventory[count];
+          }
+      }else{
+          alert("not found!");
       }
   }
-  
- if(searxhque[0] == inventory[0]){
-      if(typeof(Storage) !== "undefined"){
-      localStorage.searchterms = searxhque[0];
-      }
-      window.location.assign("../controller/searchresult.html");
- //     alert(searchterm);
-  }
- else if(searxhque[1] == inventory[1]){
-      if(typeof(Storage) !== "undefined"){
-      localStorage.searchterms = searxhque[1];
-      }
-      window.location.assign("../controller/searchresult.html");
-  }
-  else if(searxhque[2] == inventory[2]){
-      if(typeof(Storage) !== "undefined"){
-      localStorage.searchterms = searxhque[2];
-      }
-      window.location.assign("../controller/searchresult.html");
-  }
-  else{
-      alert("not found try again later.");
-  }
+  searchresults = localStorage.searchresults;
+  alert(searchresults);
 }
 
 const searchResult = function (){
-let searchterms = localStorage.searchterms;
+let _searchterms = localStorage.searchresults
     let contheader = document.querySelector("#searchheader");
     let contres = document.querySelector("#searchres1");
-    document.querySelector("#resname").innerHTML = localStorage.searchterms;
-    switch(localStorage.searchterms){
+    document.querySelector("#resname").innerHTML = localStorage.searchresults;
+    switch(localStorage.searchresults){
         case "Solutions" || "solutions":
-            contheader.innerHTML = "Looking for: " + searchterms + " <span class='badge rounded-pill bg-info'>11</span>";
+            contheader.innerHTML = "Looking for: " + _searchterms + " <span class='badge rounded-pill bg-info'>11</span>";
         document.querySelector("#searchres1").innerText = "Solutions";
         document.querySelector("#searchres2").innerText = "Demo";
         break;
         case "Education" || "education":
-           contheader.innerHTML = "Looking for: " + searchterms + " <span class='badge rounded-pill bg-info'>106</span>";
+           contheader.innerHTML = "Looking for: " + _searchterms + " <span class='badge rounded-pill bg-info'>106</span>";
            document.querySelector("#searchres1").innerText = "Up next";
            document.querySelector("#searchres2").innerText = "Solutions";
            break;
