@@ -79,6 +79,13 @@ const openSuite = function(){
      
      window.location.assign("https://tinyurl.com/2dfcmn6h")
   }
+  
+  const openShop = function (){
+      document.write("loading... please wait");
+      
+      window.location.assign("https://tinyurl.com/235p5aee")
+  }
+  
  //search controller 
  const searchHelper = function (){
  let searxh = document.getElementById("searchterms").value;
