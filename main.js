@@ -68,6 +68,17 @@ const openSuite = function(){
      window.location.assign("https://eepurl.com/iVSgP2");
  }
  
+ const openClass = function (){
+      document.write("loading... please wait");
+      
+      window.location.assign("https://tinyurl.com/25s9w8wq")
+  }
+  
+  const openDeveloper = function (){
+     document.write("loading... please wait");
+     
+     window.location.assign("https://tinyurl.com/2dfcmn6h")
+  }
  //search controller 
  const searchHelper = function (){
  let searxh = document.getElementById("searchterms").value;
