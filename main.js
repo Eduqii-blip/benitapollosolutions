@@ -67,33 +67,30 @@ const openSuite = function(){
      
      window.location.assign("https://eepurl.com/iVSgP2");
  }
-  document.getElementById("searchterms").addEventListener("keypress", function(event){
-     if(event === "Enter"){
-         event.preventDefault();
-        
-         document.getElementById("searchbtn").click();
-     }
-     
- });
  
  //search controller 
  const searchHelper = function (){
  let searxh = document.getElementById("searchterms").value;
 let thesearxh = searxh.trim();
 let searchresults;
+let notfound;
   let inventory = ["Solutions","Education","Health","solutions","education","health"];
   for(count=0;count<inventory.length;count++){
       if(thesearxh.includes(inventory[count])){
           alert("search found");
           if(typeof(Storage) !== "undefined"){
               localStorage.searchresults = inventory[count];
+              window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/searchresult.html");
           }
       }else{
-          alert("not found!");
+          notfound = "not found";
       }
   }
+  
+  if(notfound == "not found"){
+      alert("not found");
+  }
   searchresults = localStorage.searchresults;
-  alert(searchresults);
 }
 
 const searchResult = function (){
