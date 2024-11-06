@@ -97,18 +97,17 @@ let notfound;
           console.log("search found");
           if(typeof(Storage) !== "undefined"){
               localStorage.searchresults = inventory[count];
-              window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/searchresult.html");
+           document.write("loading... please wait"); window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/searchresult.html");
           }
       }else{
           notfound = "not found";
       }
   }
   
-  if(notfound == "not found"){
+  if(notfound === "not found"){
       alert("not found");
-      notfound = " ";
+      notfound = "found";
   }
-  searchresults = localStorage.searchresults;
 }
 
 const searchResult = function (){
