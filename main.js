@@ -58,8 +58,7 @@ const openSuite = function(){
   
   const openCalSys = function (){
       document.write("loading please wait...");
-      
-      window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/getdemo.html")
+       window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/getdemo.html")
   }
   
  const Subscribe = function (){
@@ -95,7 +94,7 @@ let notfound;
   let inventory = ["Solutions","Education","Health","solutions","education","health"];
   for(count=0;count<inventory.length;count++){
       if(thesearxh.includes(inventory[count])){
-          alert("search found");
+          console.log("search found");
           if(typeof(Storage) !== "undefined"){
               localStorage.searchresults = inventory[count];
               window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/searchresult.html");
@@ -107,12 +106,13 @@ let notfound;
   
   if(notfound == "not found"){
       alert("not found");
+      notfound = " ";
   }
   searchresults = localStorage.searchresults;
 }
 
 const searchResult = function (){
-let _searchterms = localStorage.searchresults
+let _searchterms = localStorage.searchresults;
     let contheader = document.querySelector("#searchheader");
     let contres = document.querySelector("#searchres1");
     document.querySelector("#resname").innerHTML = localStorage.searchresults;
