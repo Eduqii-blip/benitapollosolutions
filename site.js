@@ -3,7 +3,8 @@
              publicKey: "D1y25vk5Im7SPLYnC", }); 
              })();
              
-          window.onload = function() { document.getElementById('study-form').addEventListener('submit', function(event) {
+          window.onload = function() {
+           document.getElementById('study-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
                     .then(() => {
