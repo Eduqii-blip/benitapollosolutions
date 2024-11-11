@@ -7,102 +7,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="../asset/success.css" rel="stylesheet">
-    <style type="text/css">
-        .skeleton {
-  animation: skeleton-loading 1s linear infinite alternate;
-}
-
-@keyframes skeleton-loading {
-  0% {
-    background-color: hsl(200, 20%, 80%);
-  }
-  100% {
-    background-color: hsl(200, 20%, 95%);
-  }
-}
-
-.skeleton-text {
-  width: 100%;
-  height: 0.7rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.25rem;
-}
-
-.skeleton-text__body {
-  width: 75%;
-}
-
-.skeleton-footer {
-  width: 30%;
-  }
-    </style>
 </head>
 <body>
     <div class="container">
      <template id="card-template"> 
-  <a class="card" id="card-link" target="_blank">
-    <div class="card__header">
-      <div>
-        <img class="card__header header__img skeleton" id="logo-img" src="https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/4a287b2e7cb5499bae863f8e7137cdb4" />
-      </div>
-      <h3 class="card__header header__title" id="card-title">
-        Writing Cleaner CSS Using BEM
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text"></div>
-      </h3>
+           <a class="card" id="card-link" target="_blank">
+  <div class="card__header">
+    <div>
+      <img class="card__header header__img skeleton" id="logo-img" alt="" />
+    </div>
+    <h3 class="card__header header__title" id="card-title">
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text"></div>
+    </h3>
+  </div>
+
+  <div class="card__body">
+    <div class="card__body body__text" id="card-details">
+      <div class="skeleton skeleton-text skeleton-text__body"></div>
     </div>
 
-    <div class="card__body">
-      <div class="card__body body__text" id="card-details">
-        Mar 12, 2022 · 4m read time
-        <div class="skeleton skeleton-text   skeleton-text__body"></div>
-      </div>
-
-      <div class="card__body body__img">
-        <img class="skeleton" src="https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/dd19e7a56475f39ab1c38167c02c7b58" id="cover-img" />
-      </div>
+    <div class="card__body body__img">
+      <img class="skeleton" alt="" id="cover-img" />
     </div>
+  </div>
 
-    <div class="card__footer" id="card-footer">
-        <div class="skeleton skeleton-text skeleton-footer"></div>
-      <ion-icon name="arrow-up"></ion-icon>
-      <ion-icon name="chatbox-ellipses"></ion-icon>
-      <ion-icon name="bookmark"></ion-icon>
-    </div>
-  </a>
+  <div class="card__footer" id="card-footer">
+    <div class="skeleton skeleton-text skeleton-footer"></div>
+  </div>
+</a>
        </template> 
 </div>
 
 <!-- Install ION ICONS via CDN -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script type="text/javascript">
-    const container = document.querySelector(".container");
-const cardTemplate = document.getElementById("card-template");
-for (let i = 0; i < 10; i++) {
-  container.append(cardTemplate.content.cloneNode(true));
-}
-</script>
-<script type="text/javascript">
-    fetch("../asset/data.json")
-  .then((response) => response.json())
-  .then((posts) => {
-    container.innerHTML = "";
-    posts.forEach((post) => {
-      const div = cardTemplate.content.cloneNode(true);
-      div.getElementById("card-link").href = post.link;
-      div.getElementById("logo-img").src = post.logoImage;
-      div.getElementById("card-title").textContent = post.title;
-      div.getElementById("card-details").textContent = post.details;
-      div.getElementById("cover-img").src = post.coverImage;
-      div.getElementById(
-        "card-footer"
-      ).innerHTML = ` <ion-icon name="arrow-up"></ion-icon>
-          <ion-icon name="chatbox-ellipses"></ion-icon>
-          <ion-icon name="bookmark"></ion-icon>`;
-      container.append(div);
-    });
-  });
+<script type="text/javascript" src="successite.js">
 </script>
   </body>
 </body>
