@@ -1,4 +1,4 @@
-    (function() {  
+   (function() {  
              emailjs.init({ 
              publicKey: "D1y25vk5Im7SPLYnC", }); 
              })();
@@ -14,11 +14,11 @@
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-            });     
+                    
+            },true);     
             
-            //study solution 
-            
-            document.getElementById('study-form').addEventListener('submit', function(event) {
+            /* study solution 
+             document.getElementById('study-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
                     .then(() => {
@@ -28,5 +28,5 @@
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-            });        
+            },true);        */
         }
