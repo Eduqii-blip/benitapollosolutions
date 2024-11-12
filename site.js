@@ -4,7 +4,7 @@
              })();
              
           window.onload = function() {
-           document.getElementById('study-form').addEventListener('submit', function(event) {
+           document.getElementById('solution-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
                     .then(() => {
@@ -14,10 +14,11 @@
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-            ));
+            });     
             
-  //solutions
-   document.getElementById('solution-form').addEventListener('submit', function(event) {
+            //study solution 
+            
+            document.getElementById('study-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
                     .then(() => {
@@ -27,5 +28,5 @@
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-          ));
+            });        
         }
