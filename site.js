@@ -10,7 +10,7 @@
                     .then(() => {
                         console.log('SUCCESS!');
                         document.write("information sent");
-                        window.location.assign("../controller/studysuccess.html");
+                        window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/studysuccess.html");
                     }, (error) => {
                         console.log('FAILED...', error);
                     });

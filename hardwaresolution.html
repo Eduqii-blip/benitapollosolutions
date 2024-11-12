@@ -22,8 +22,11 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active">
-                                Education 
+                                Hardware Solution
                             </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://eduqii-blip.github.io/benitapollosolutions/solutions.html" class="nav-link">Solutions</a>
                         </li>
                     </ul>
                 </div>
@@ -61,17 +64,23 @@
         </div>
         <div class="container mt-5">
             <div class="shadow-lg bg-light m-5 p-5">
-                <form>
+                <form method="post">
                     <label class="form-label">
                         Facility 
                     </label>
                     <input type="text" name="institute" class="form-control form-control-lg mb-3">
+                    <label class="form-label">
+                        Email address 
+                    </label>
+                    <input class="form-control form-control-lg mb-3" type="email">
                     <label class="form-label">Solution Type</label>
                     <select class="form-select">
-                        <option value="school management suite">In-Class Solutions</option>
+                        <option value="school management suite">In-Class Solution</option>
+                        <option value="InShop Solution">In-Shop Solution</option>
+                        <option value="InClinic Solution">In-Clinic Solution</option>
                         <option disabled selected>Please select an option</option>
                     </select>
-                    <button class="btn btn-primary mt-5">Submit</button>
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
                 </form>
                 <p class="mt-5">Join our mailing list today. </p><input type="button" value="Subscribe" class="btn btn-danger" onClick="Subscribe()">
             </div>
