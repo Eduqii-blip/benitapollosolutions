@@ -47,7 +47,7 @@ const htmlBody = document.querySelector('html');
     }
     
 const getSolution = function(){
-    document.write("loading please wait...");
+    document.write("loading please wait... study in the U.S.A U.K Canada Europe");
     window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationstudy.html");
 }
 
