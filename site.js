@@ -16,8 +16,6 @@
                     });
                     
             },true);     
-            
-            /* study solution 
              document.getElementById('study-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
@@ -28,5 +26,5 @@
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-            },true);        */
+            },true);        
         }
