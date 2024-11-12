@@ -4,7 +4,7 @@
              })();
              
           window.onload = function() {
-           document.getElementById('solution-form').addEventListener('submit', function(event) {
+           document.getElementById('study-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
                     .then(() => {
@@ -14,5 +14,18 @@
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-            });
+            ));
+            
+  //solutions
+   document.getElementById('solution-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        document.write("information sent");
+                        window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/studysuccess.html");
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+          ));
         }
