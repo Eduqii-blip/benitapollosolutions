@@ -1,7 +1,8 @@
-const message = function (){ 
+const getHome = function (){ 
 window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/home.html");
-console.log("10")
+console.log("200")
+console.log(location.protocol);
     
 }
 
-export { message };
+export { getHome };
