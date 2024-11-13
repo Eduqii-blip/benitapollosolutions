@@ -14,7 +14,7 @@
                             window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/studysuccess.html");
                         } 
                         else if(location.href="https://eduqii-blip.github.io/benitapollosolutions/educationsolution.html"){
-                            window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/test.html")
+                            window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/gettingstarted.html")
                         }
                     }, (error) => {
                         console.log('FAILED...', error);
