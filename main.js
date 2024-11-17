@@ -91,20 +91,27 @@ const openSuite = function(){
 let thesearxh = searxh.trim();
 let searchresults;
 let notfound;
-  let inventory = ["Solutions","Education","Health","solutions","education","health"];
+  let inventory = ["Solutions","Education","Health","solutions","education","health", "Ga-South Clientele"];
   for(count=0;count<inventory.length;count++){
       if(thesearxh.includes(inventory[count])){
+          notfound = 1;
           console.log("search found");
           if(typeof(Storage) !== "undefined"){
               localStorage.searchresults = inventory[count];
+              if(localStorage.searchresults === "Ga-South Clientele"){
+                  document.write("loading... please wait");
+                  window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/basbusiness.html");
+              }
+              else{
            document.write("loading... please wait"); window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/searchresult.html");
+           }
           }
       }else{
-          notfound = "not found";
+          notfound = 2;
       }
   }
   
-  if(notfound === "not found"){
+  if(notfound % 2 == 0){
       alert("not found");
       notfound = "found";
   }
