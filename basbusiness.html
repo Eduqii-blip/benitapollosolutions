@@ -44,6 +44,19 @@
             <div class="table-responsive-sm">
             <table class="table table-striped">
                 <tr>
+                    <td>BASB<span class="myYear"></span>OHC</td>
+                    <td>Outfit Hub Collections</td>
+                    <td><span class="jobYear"></span></td>
+                    <td>GHS1650</td>
+                    <td>Digital Presence</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails1" class="btn btn-outline-success">Details</button></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
                     <thead>
                         <th>ID</th>
                         <th>Business Name</th>
@@ -55,11 +68,12 @@
                         <th>Email</th>
                         <th>Date</th>
                         <th>&nbsp;</th>
+                        <th>Arears report</th>
                     </thead>
                 </tr>
                 <tr>
                     <td>BASB<span class="myYear"></span>RS</td>
-                    <td>Royal Secondary School</td>
+                    <td>The Royals Secondary School Ablekuma</td>
                     <td><span class="jobYear"></span></td>
                     <td>GHS680</td>
                     <td>Computing </td>
@@ -68,6 +82,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails" class="btn btn-outline-success">Details</button></td>
+                    <td><button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-primary">Report</button> </td>
                 </tr>
                 <tr>
                     <td>BASB<span class="myYear"></span>E</td>
@@ -80,6 +95,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#relDetails" class="btn btn-outline-success">Details</button></td>
+                    <td>&nbsp;</td>
                 </tr>
                 </table>
             </div>
@@ -171,8 +187,33 @@
             <button class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
         </div>
         <div class="offcanvas-body">
-            <p>Name of Institution: Royal Secondary School Ablekuma</p>
+            <p>Name of Institution: The Royals Secondary School Ablekuma</p>
             <p>Amount Payable: Ghs680</p>
+            <p class="text-muted"><!--Amount Paid: Ghs200, 18/11/24. Total to pay: Ghs680</p><br>
+            Paid: Ghs150 <br>
+            Date: 2/12/2024<br>
+            Payment Method: Cash <br>-->
+            2nd Week: Ghs150 <span class="text-danger">unpaid</span><br>
+            3rd Week: Ghs150 <span class="text-danger">unpaid</span>
+           <!--New: Seasonal computing; <br>
+            Payment mode: weekly.
+            Payment method: cash 
+            Date: 22/11/2020
+            First week: Ghs150 <span class="badge bg-success">Paid</span>--></p>
+            <button class="btn btn-outline-success">Checkout</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" id="gigDetails1">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title">Period <span class="myYear"></span></h3>
+            <button class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Name of Institution: Outfit Hub Collections Ablekuma</p>
+            <p>Amount Payable: Ghs1650</p>
+            <p class="text-muted">
+                Digital Presence 
+            </p>
             <button class="btn btn-outline-success">Checkout</button>
         </div>
     </div>
@@ -188,6 +229,116 @@
             <button class="btn btn-outline-success">Checkout</button>
         </div>
     </div>
+      <div class="offcanvas offcanvas-end" id="relDetails">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title">Period <span class="myYear"></span></h3>
+            <button class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Name of Institution: Outfit Hub Collection <br>Ablekuma</p>
+            <p>Digital Presence <a href="#mou" data-bs-toggle="collapse">MOU</a></p>
+            <p>Amount Payable: Ghs1650</p>
+            <button class="btn btn-outline-success">Checkout</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" id="arearsreport">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title">Arears report As At August / September Till <span id="arearsperiod"></span> Is Ghs680</h4>
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Arears report </p>
+            <table class="table">
+                <caption>Arears Report</caption>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                           <th>Class</th>
+                           <th>Amount</th>
+                           <th>Status</th>
+                           <th>Amount Received</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <td>30th September</td>
+                        <td colspan="3">Total Amount Payable</td>
+                        <td><span class="text-danger">Ghs1050</span></td>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>August</td>
+                            <td>Elective I.C.T <br> Graphic Design</td>
+                            <td>Ghs600</td>
+                            <td><span class="badge bg-danger">unpaid</span></td>
+                              <td><span class="text-danger">Ghs0</span></td>
+                        </tr>
+                        <tr>
+                            <td>September</td>
+                            <td>Elective I.C.T <br> Graphic Design </td>
+                            <td>Ghs600</td>
+                            <td><span class="badge bg-warning">half payment</span></td>
+                            <td><span class="text-info">Ghs150</span></td>
+                        </tr>
+                    </tbody>
+            </table><hr>
+         <p style="font-variant: small-caps;"> Arears Payment Report  </p>
+            <table class="table">
+                <caption>Started payment from October 30th</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Total Amount Due</th>
+                            <th>Amount Received</th>
+                            <th>Mode of payment</th>
+                            <th>Balance due</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>October 30th</td>
+                            <td>Ghs1050</td>
+                            <td><span class="text-primary">Ghs200</span></td>
+                            <td>Mobile Money </td>
+                            <td><span class="text-danger">Ghs850</span></td>
+                        </tr>
+                        <tr>
+                            <td>November 11th</td>
+                            <td>Ghs850</td>
+                            <td><span class="text-primary">Ghs20</span></td>
+                            <td>Cash-in-hand</td>
+                            <td><span class="text-danger">Ghs830</span></td>
+                        </tr>
+                        <tr>
+                            <td>November 14th</td>
+                            <td>Ghs830</td>
+                            <td><span class="text-primary">Ghs100</span></td>
+                            <td>Cash-in-hand</td>
+                            <td><span class="text-danger">Ghs730</span></td>
+                        </tr>
+                        <tr>
+                            <td>November 18th</td>
+                            <td>Ghs730</td>
+                            <td><span class="text-primary">Ghs200</span></td>
+                            <td>Cash-in-hand</td>
+                            <td><span class="text-danger">Ghs530</span></td>
+                        </tr>
+                    </tbody>
+            </table>
+            <table class="table">
+                <caption>New Task. Amount: Ghs150</caption>
+                <tr>
+                    <th>1st Week</th>
+                    <th>2nd Week</th>
+                    <th>3rd Week</th>
+                </tr>
+                <tr>
+                    <td>Paid</td>
+                    <td>Paid </td>
+                    <td>unpaid </td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <script type="text/javascript">
         let _myYear = new Date();
         let nodeList = document.querySelectorAll(".myYear");
@@ -198,6 +349,8 @@
         for(let n=0; n < _jobnode.length; n++){
         _jobnode[n].innerHTML = _myYear.getFullYear();
         }
+        let arearperiod = document.querySelector("#arearsperiod");
+        arearperiod.innerHTML = _myYear.toGMTString();
     </script>
 </body>
 </html>
